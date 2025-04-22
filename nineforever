@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nine Forever</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 設定基本字體 */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* 深藍色漸層背景 */
+        body {
+            background: linear-gradient(to bottom right, #1a202c, #2d3748, #4a5568); /* 深藍到灰藍漸層 */
+            color: #e2e8f0; /* 淺灰色文字，提高對比度 */
+            overflow-x: hidden; /* 防止水平滾動 */
+        }
+        /* 霧面玻璃效果 */
+        .frosted-glass {
+            background-color: rgba(255, 255, 255, 0.1); /* 半透明白色背景 */
+            backdrop-filter: blur(10px); /* 背景模糊效果 */
+            -webkit-backdrop-filter: blur(10px); /* Safari 支援 */
+            border: 1px solid rgba(255, 255, 255, 0.2); /* 細微邊框增加立體感 */
+        }
+        /* 響應式 YouTube 嵌入 (自訂尺寸) */
+        .youtube-container {
+            position: relative;
+            width: 100%;
+            max-width: 640px; /* 同 iframe width */
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            border-radius: 0.5rem; /* 圓角 */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* 陰影 */
+        }
+        /* 保持寬高比 (360 / 640 = 0.5625) */
+        .youtube-container::before {
+            content: "";
+            display: block;
+            padding-top: 56.25%;
+        }
+        .youtube-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        /* 按鈕樣式 */
+        .action-button {
+             /* Tailwind class 已包含主要樣式 */
+             transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .action-button:hover {
+            transform: scale(1.05); /* 懸停時放大 */
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2); /* 懸停時增強陰影 */
+        }
+
+    </style>
+</head>
+<body class="text-gray-100">
+
+    <main class="container mx-auto px-4 md:px-8 lg:px-16 py-12 space-y-16 md:space-y-24">
+
+        <section class="relative h-[60vh] md:h-[80vh] flex items-center justify-center md:justify-end rounded-lg overflow-hidden shadow-2xl">
+            <img src="https://u1.padletusercontent.com/uploads/padlet-uploads/2512033985/97dd3b40b959aabb92245285880d236b/home_page_image.JPG?token=6_IuUNN90u0z7ZFnxvrptNkc4l9PvNKjWOaBaIFv99jjBsVMsHF3eUgHq-rgmU3rFOF2LkuFR7J3AfwPJFmP-69OjWIY-x0KcxRo294mDrtMBKDbpnpnaaaltVtQTBEMymb8mOpCaIRKAETNyC7FEg1-c3hw4tLWlTEdhZ9vDb9CSzba7Jkt-_HkSSmVUzTFgui4X9rKHji9421owwvc94jvifAyzZs7Jr3l_EZhJYW6s-o9FxhdZWUfrNifRqOM"
+                 alt="Nine Forever 首頁圖片"
+                 class="absolute inset-0 w-full h-full object-cover"
+                 onerror="this.onerror=null; this.src='https://placehold.co/1200x800/1a202c/e2e8f0?text=首頁圖片載入失敗';"
+            >
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-black/10 to-black/60"></div>
+
+            <div class="relative z-10 w-11/12 md:w-1/2 lg:w-2/5 p-6 md:p-10 mr-0 md:mr-8 lg:mr-16 frosted-glass rounded-lg text-right shadow-xl">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 ">Nine Forever</h2>
+                <p class="text-xl md:text-2xl text-gray-200 font-semibold">Just Do It！</p>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="text-3xl font-bold text-center mb-8">活動 MV</h3>
+            <div class="youtube-container">
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/I_ab8Gc5r6k" title="【Nine Forever】Drama X 星期五晚上 組曲 藝文風正式表演MV #莒光藝文風" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="text-center py-8">
+             <a href="https://drive.google.com/drive/folders/1WD8gLBnF8cqlVf3Z2Hub9vytkUycjJzF?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="action-button inline-block bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg">
+                 精彩照片
+             </a>
+        </section>
+
+        <section class="text-center py-8">
+             <a href="https://sites.google.com/view/609art/photo?authuser=0"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="action-button inline-block bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg">
+                 顯示幕後花絮
+             </a>
+        </section>
+
+        <section class="text-center">
+            <h4 class="text-4xl font-bold text-yellow-300">609藝文風 大順利！</h4>
+        </section>
+
+    </main>
+
+    <footer class="mt-16 md:mt-24 py-6 px-4 md:px-8 lg:px-16 text-center text-gray-400 border-t border-gray-700">
+        <p>© 2025 Nine Forever. All rights reserved.</p>
+        <p>郭沛勳 製作</p>
+    </footer>
+
+</body>
+</html>
+
